@@ -157,6 +157,7 @@ def construire_rapport(infos: dict) -> list:
 
 
 
+
 class IMCApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -597,7 +598,6 @@ class IMCApp(tk.Tk):
         pmax       = obj["poids_max_normal"]
         imc        = obj["imc"]
 
-        # Message principal
         if 18.5 <= imc < 25:
             msg      = "Tu es dans la zone normale !"
             msg_col  = THEME["success"]
@@ -618,7 +618,6 @@ class IMCApp(tk.Tk):
         inner = tk.Frame(obj_f, bg=THEME["card"])
         inner.pack(fill="x", padx=14, pady=10)
 
-        # Icône + message
         icon_col = THEME["success"] if 18.5 <= imc < 25 else THEME["warning"]
         icon     = "✓" if 18.5 <= imc < 25 else "→"
         tk.Label(inner, text=icon, font=self.F["obj"],
@@ -633,7 +632,6 @@ class IMCApp(tk.Tk):
                  fg=THEME["muted2"], bg=THEME["card"],
                  anchor="w", justify="left").pack(anchor="w")
 
-        # Ligne ecart ideal
         tk.Frame(obj_f, bg=THEME["border"], height=1).pack(
             fill="x", padx=14)
         bot = tk.Frame(obj_f, bg=THEME["card2"])
