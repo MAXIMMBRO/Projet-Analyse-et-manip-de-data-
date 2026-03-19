@@ -17,8 +17,6 @@
 - Entrées utilisateur (Tkinter Entry + StringVar)
 - Calculs arithmétiques
 - Conditions (if / elif / for)
-- Classes et POO (tkinter.Tk)
-- Gestion d'erreurs (try/except)
 
 ## Lancer le script directement
     python imc_app.py
